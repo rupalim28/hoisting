@@ -62,7 +62,7 @@ async function simpleasyncawait(){
   conole.log(result,"result")
 }
 
-simpleasyncawait.catch((err)=>{
+simpleasyncawait().catch((err)=>{
   console.error(err,"error")
 })
 
@@ -86,3 +86,17 @@ async function printasyncawait(){
 printasyncawait()
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+function add(){
+  return 1+2
+}
+
+async function giveresult(){
+  const result = await add()
+  console.log(result,"result")
+}
+
+giveresult().catch((err)=>{
+  console.error(err,"error")
+})
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
